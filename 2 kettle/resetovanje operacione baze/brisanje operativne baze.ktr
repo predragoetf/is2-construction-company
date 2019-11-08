@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>brisanje operativne baze</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <directory>/</directory>
+    <parameters>
+    </parameters>
+    <log>
+      <trans-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <size_limit_lines/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STATUS</id>
+          <enabled>Y</enabled>
+          <name>STATUS</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+          <subject/>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+          <subject/>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>STARTDATE</id>
+          <enabled>Y</enabled>
+          <name>STARTDATE</name>
+        </field>
+        <field>
+          <id>ENDDATE</id>
+          <enabled>Y</enabled>
+          <name>ENDDATE</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>DEPDATE</id>
+          <enabled>Y</enabled>
+          <name>DEPDATE</name>
+        </field>
+        <field>
+          <id>REPLAYDATE</id>
+          <enabled>Y</enabled>
+          <name>REPLAYDATE</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>Y</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+        <field>
+          <id>EXECUTING_SERVER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_SERVER</name>
+        </field>
+        <field>
+          <id>EXECUTING_USER</id>
+          <enabled>N</enabled>
+          <name>EXECUTING_USER</name>
+        </field>
+        <field>
+          <id>CLIENT</id>
+          <enabled>N</enabled>
+          <name>CLIENT</name>
+        </field>
+      </trans-log-table>
+      <perf-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <interval/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>SEQ_NR</id>
+          <enabled>Y</enabled>
+          <name>SEQ_NR</name>
+        </field>
+        <field>
+          <id>LOGDATE</id>
+          <enabled>Y</enabled>
+          <name>LOGDATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>INPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>INPUT_BUFFER_ROWS</name>
+        </field>
+        <field>
+          <id>OUTPUT_BUFFER_ROWS</id>
+          <enabled>Y</enabled>
+          <name>OUTPUT_BUFFER_ROWS</name>
+        </field>
+      </perf-log-table>
+      <channel-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>LOGGING_OBJECT_TYPE</id>
+          <enabled>Y</enabled>
+          <name>LOGGING_OBJECT_TYPE</name>
+        </field>
+        <field>
+          <id>OBJECT_NAME</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_NAME</name>
+        </field>
+        <field>
+          <id>OBJECT_COPY</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_COPY</name>
+        </field>
+        <field>
+          <id>REPOSITORY_DIRECTORY</id>
+          <enabled>Y</enabled>
+          <name>REPOSITORY_DIRECTORY</name>
+        </field>
+        <field>
+          <id>FILENAME</id>
+          <enabled>Y</enabled>
+          <name>FILENAME</name>
+        </field>
+        <field>
+          <id>OBJECT_ID</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_ID</name>
+        </field>
+        <field>
+          <id>OBJECT_REVISION</id>
+          <enabled>Y</enabled>
+          <name>OBJECT_REVISION</name>
+        </field>
+        <field>
+          <id>PARENT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>PARENT_CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>ROOT_CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>ROOT_CHANNEL_ID</name>
+        </field>
+      </channel-log-table>
+      <step-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>TRANSNAME</id>
+          <enabled>Y</enabled>
+          <name>TRANSNAME</name>
+        </field>
+        <field>
+          <id>STEPNAME</id>
+          <enabled>Y</enabled>
+          <name>STEPNAME</name>
+        </field>
+        <field>
+          <id>STEP_COPY</id>
+          <enabled>Y</enabled>
+          <name>STEP_COPY</name>
+        </field>
+        <field>
+          <id>LINES_READ</id>
+          <enabled>Y</enabled>
+          <name>LINES_READ</name>
+        </field>
+        <field>
+          <id>LINES_WRITTEN</id>
+          <enabled>Y</enabled>
+          <name>LINES_WRITTEN</name>
+        </field>
+        <field>
+          <id>LINES_UPDATED</id>
+          <enabled>Y</enabled>
+          <name>LINES_UPDATED</name>
+        </field>
+        <field>
+          <id>LINES_INPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_INPUT</name>
+        </field>
+        <field>
+          <id>LINES_OUTPUT</id>
+          <enabled>Y</enabled>
+          <name>LINES_OUTPUT</name>
+        </field>
+        <field>
+          <id>LINES_REJECTED</id>
+          <enabled>Y</enabled>
+          <name>LINES_REJECTED</name>
+        </field>
+        <field>
+          <id>ERRORS</id>
+          <enabled>Y</enabled>
+          <name>ERRORS</name>
+        </field>
+        <field>
+          <id>LOG_FIELD</id>
+          <enabled>N</enabled>
+          <name>LOG_FIELD</name>
+        </field>
+      </step-log-table>
+      <metrics-log-table>
+        <connection/>
+        <schema/>
+        <table/>
+        <timeout_days/>
+        <field>
+          <id>ID_BATCH</id>
+          <enabled>Y</enabled>
+          <name>ID_BATCH</name>
+        </field>
+        <field>
+          <id>CHANNEL_ID</id>
+          <enabled>Y</enabled>
+          <name>CHANNEL_ID</name>
+        </field>
+        <field>
+          <id>LOG_DATE</id>
+          <enabled>Y</enabled>
+          <name>LOG_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_DATE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DATE</name>
+        </field>
+        <field>
+          <id>METRICS_CODE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_CODE</name>
+        </field>
+        <field>
+          <id>METRICS_DESCRIPTION</id>
+          <enabled>Y</enabled>
+          <name>METRICS_DESCRIPTION</name>
+        </field>
+        <field>
+          <id>METRICS_SUBJECT</id>
+          <enabled>Y</enabled>
+          <name>METRICS_SUBJECT</name>
+        </field>
+        <field>
+          <id>METRICS_TYPE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_TYPE</name>
+        </field>
+        <field>
+          <id>METRICS_VALUE</id>
+          <enabled>Y</enabled>
+          <name>METRICS_VALUE</name>
+        </field>
+      </metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>10000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+    <created_user>-</created_user>
+    <created_date>2018/02/16 13:35:32.856</created_date>
+    <modified_user>-</modified_user>
+    <modified_date>2018/02/16 13:35:32.856</modified_date>
+    <key_for_session_key/>
+    <is_key_private>N</is_key_private>
+  </info>
+  <notepads>
+  </notepads>
+  <connection>
+    <name>gradilisteOp</name>
+    <server>localhost</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>gradilisteOp</database>
+    <port>1433</port>
+    <username>sa</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10bef2bcdb</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MSSQL.instance</code>
+        <attribute>.</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>FORCE_IDENTIFIERS_TO_UPPERCASE</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>IS_CLUSTERED</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>PORT_NUMBER</code>
+        <attribute>1433</attribute>
+      </attribute>
+      <attribute>
+        <code>PRESERVE_RESERVED_WORD_CASE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>QUOTE_ALL_FIELDS</code>
+        <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>SUPPORTS_TIMESTAMP_DATA_TYPE</code>
+        <attribute>Y</attribute>
+      </attribute>
+      <attribute>
+        <code>USE_POOLING</code>
+        <attribute>N</attribute>
+      </attribute>
+    </attributes>
+  </connection>
+  <order>
+  </order>
+  <step>
+    <name>Obrisi sve</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <connection>gradilisteOp</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>DELETE FROM PocetakRada;
+DBCC CHECKIDENT(PocetakRada, RESEED, 0);
+
+DELETE FROM KrajRada;
+DBCC CHECKIDENT(KrajRada, RESEED, 0);
+
+DELETE FROM Zaposleni;
+
+DELETE FROM Potrosnja;
+
+DELETE FROM Nabavka;
+DBCC CHECKIDENT(Nabavka, RESEED, 0);
+
+DELETE FROM Distributer;
+
+DELETE FROM ZonaMagacina;
+DBCC CHECKIDENT(ZonaMagacina, RESEED, 0);
+
+DELETE FROM Magacin;
+DBCC CHECKIDENT(Magacin, RESEED, 0);
+
+DELETE FROM Gradiliste;
+DBCC CHECKIDENT(Gradiliste, RESEED, 0);
+
+DELETE FROM Materijal;
+DBCC CHECKIDENT (Materijal, RESEED, 0);
+
+DELETE FROM Tip;
+DBCC CHECKIDENT (Tip, RESEED, 0);
+
+DELETE FROM Opstina;
+DBCC CHECKIDENT(Opstina, RESEED, 0);
+
+DELETE FROM Drzava;
+DBCC CHECKIDENT (Drzava, RESEED, 0);
+
+INSERT INTO Tip (Tip)
+VALUES 
+('alat'),
+('metalno'),
+('drveno');
+
+
+INSERT INTO Materijal (Naziv, IdT)
+VALUES
+('burgija', 1),
+('cekic', 1),
+('ekser', 2),
+('greda', 3),
+('daska', 3),
+('srafciger', 1),
+('sraf', 2),
+('klesta', 1),
+('brusilica', 1),
+('lajsna', 3),
+('cev', 2);
+
+
+INSERT INTO Drzava (Drzava)
+VALUES
+('Srbija'),
+('Crna Gora');
+
+
+INSERT INTO Opstina(IdD, Opstina, Grad)
+VALUES
+(1, 'Novi Beograd', 'Beograd'),
+(1, 'Palilula', 'Beograd'),
+(1, 'Misa', 'Pancevo'),
+(1, 'Sabac', 'Sabac'),
+(2, 'Podgorica', 'Podgorica'),
+(2, 'Bar', 'Bar'),
+(2, 'Niksic', 'Niksic');
+
+
+INSERT INTO Gradiliste(Naziv, Ulica, Broj, IdO)
+VALUES
+('gradiliste1', 'Bul. Mihajla Pupina', 13, 1),
+('gradiliste2', 'Kamicak', 11, 4),
+('gradiliste3', 'Gorskoga Vijenca', 1, 6);
+
+
+INSERT INTO Magacin(IdG, Naziv)
+VALUES
+(1, 'mag1grad1'),
+(1, 'mag2grad1'),
+(1, 'mag3grad1'),
+(2, 'mag1grad2'),
+(2, 'mag2grad2'),
+(3, 'mag1grad3');
+
+
+INSERT INTO ZonaMagacina (IdMag, Naziv, RedniBrojUnutarMagacina, Kapacitet)
+VALUES
+(1, 'zona sumraka', 1, 1000),
+(1, 'zona svitanja', 2, 2000),
+(2, 'zona pomracenja', 1, 1000),
+(3, 'zona bez imena', 1, 1000),
+(4, 'zona bez droge', 1, 2000),
+(4, 'zona bozona', 2, 3000),
+(5, 'zona plavog slona', 1, 4000),
+(6, 'zona1', 1, 111),
+(6, 'zona2', 2, 222),
+(6, 'zona3', 3, 333),
+(6, 'zona4', 4, 444),
+(6, 'zona5', 5, 555);
+
+INSERT INTO Distributer (PIB, IdO, NazivFirme, Ulica, Broj)
+VALUES
+('123', 1, 'Energoprojekt', 'Bul. Mihajla Pupina', 16),
+('234', 1, 'Hardox DOO', 'Bul, A. Carnojevica', 34),
+('345', 3, 'PanCom', 'Janke Balaza', 43),
+('456', 3, 'Panama', 'Vrsacki Put', 19),
+('567', 4, 'Stovariste Sabac', 'Misarska', 2),
+('678', 5, 'Lencuga i sin', 'Serdara Djukanovica', 1);
+
+INSERT INTO Nabavka (PIB, IdMat, IdZM, Kolicina, JedinicnaCena, DatumVreme)
+VALUES
+('123', 1, 1, 100, 150.0, '2017-1-1'),
+('123', 1, 1, 50, 140.0, '2017-1-2'),
+('123', 2, 1, 50, 200.0, '2017-1-3'),
+('234', 2, 1, 50, 250.0, '2017-1-3'),
+('234', 2, 2, 50, 250.0, '2017-1-1'),
+('234', 2, 4, 60, 250.0, '2017-2-4'),
+('345', 3, 2, 700, 5.5, '2017-10-1'),
+('345', 3, 1, 200, 6.0, '2017-10-2'),
+('456', 3, 1, 100, 6.0, '2017-10-2'),
+('345', 3, 2, 100, 6.5, '2017-10-2'),
+
+('567', 4, 5, 300, 1500.0, '2017-1-1'),
+('567', 4, 5, 50, 1450.0, '2017-1-2'),
+('567', 4, 6, 30, 1600.0, '2017-1-3'),
+('567', 5, 6, 500, 450.0, '2017-1-3'),
+('567', 5, 7, 150, 450.0, '2017-1-1'),
+('567', 5, 7, 200, 500.0, '2017-2-4'),
+('678', 11, 8, 70, 2000, '2017-11-1'),
+('678', 11, 9, 20, 2000, '2017-11-5'),
+('678', 11, 10, 10, 2000, '2017-8-3'),
+('678', 11, 11, 10, 1900, '2017-9-2'),
+
+('678', 11, 12, 10, 1900, '2017-9-2'),
+('678', 11, 12, 10, 1900, '2017-9-3'),
+('678', 11, 12, 10, 1900, '2017-9-4'),
+('678', 11, 12, 10, 1900, '2017-9-5'),
+('678', 11, 12, 10, 1900, '2017-9-6'),
+('678', 11, 12, 10, 1900, '2017-9-7'),
+('678', 11, 12, 10, 1900, '2017-9-8'),
+('678', 11, 12, 10, 1900, '2017-9-9'),
+('678', 11, 12, 10, 1900, '2017-9-10'),
+('678', 11, 12, 10, 1900, '2017-9-11'),
+
+('123', 10, 1, 10, 120, '2016-9-2'),
+('123', 10, 1, 10, 120, '2016-9-3'),
+('123', 10, 1, 10, 120, '2016-9-4'),
+('123', 10, 1, 10, 120, '2016-9-5'),
+('123', 10, 1, 10, 120, '2016-9-6'),
+('123', 10, 1, 10, 120, '2016-9-7'),
+('123', 10, 1, 10, 120, '2016-9-8'),
+('123', 10, 1, 10, 120, '2016-9-9'),
+('123', 10, 1, 10, 120, '2016-9-10'),
+('123', 10, 1, 10, 120, '2016-9-11'),
+
+('123', 10, 2, 10, 120, '2016-9-12'),
+('123', 10, 2, 10, 120, '2016-10-1'),
+('123', 10, 2, 10, 120, '2016-10-2'),
+('123', 10, 2, 10, 120, '2016-10-3'),
+('123', 10, 2, 10, 120, '2016-10-4'),
+('123', 10, 2, 10, 120, '2016-10-5'),
+('123', 10, 2, 10, 120, '2016-10-6'),
+('123', 10, 2, 10, 120, '2016-10-7'),
+('123', 10, 2, 10, 120, '2016-10-8'),
+('123', 10, 2, 10, 120, '2016-10-9'),
+
+('234', 9, 1, 5, 12000, '2016-1-10'),
+('234', 8, 1, 10, 400, '2016-1-11'),
+('234', 7, 3, 500, 3.5, '2016-1-10'),
+('234', 6, 1, 10, 200, '2016-1-11'),
+('234', 7, 3, 100, 3.5, '2016-1-10'),
+('234', 7, 3, 100, 3.5, '2016-1-11'),
+('234', 7, 3, 100, 3.5, '2016-2-10'),
+('234', 7, 3, 100, 3.5, '2016-2-11'),
+('234', 7, 3, 100, 3.5, '2016-2-10'),
+('234', 7, 3, 100, 3.5, '2016-2-11');
+
+
+INSERT INTO Potrosnja (IdN, Kolicina)
+VALUES
+(1 , 1), 
+(1 , 2),
+(1 , 3), 
+(1 , 4), 
+(1 , 5), 
+(1 , 6), 
+(1 , 7), 
+(1 , 8), 
+(1 , 9), 
+(1 , 10), 
+
+(2 , 5), 
+(3 , 5),
+(4 , 5), 
+(5 , 5), 
+(6 , 5), 
+(7 , 5), 
+(8 , 5), 
+(9 , 5), 
+(10 , 5), 
+(11 , 5), 
+
+(21 , 1),
+(31 , 1), 
+(41 , 1), 
+(22 , 5), 
+(23 , 5), 
+(24 , 5), 
+(42 , 1), 
+(43 , 100), 
+(44 , 2),
+(45 , 75); 
+
+
+INSERT INTO Zaposleni (JMBG, Ime, Prezime, Ulica, Broj, IdO, BrojTelefona)
+VALUES
+('1102995710022', 'Zvijezda', 'Zvijezdic', 'Bul. A. Carnojevica', 163, 1, '064-025-9808'),
+('1203996711122', 'Neven', 'Vene', 'Studentske depresije', 1, 2, '066-111-222'),
+('1304992770033', 'Kajla', 'Minog', 'Laznih imena', 12, 3, '061-222-333'),
+('1111991710011', 'Ajdan', 'Edan', 'Kosmopolitska', 11, 3, '061-111-111'),
+('0101976630033', 'Medjed', 'Rostilja', 'Ulica prezivljavanja', 1, 6, '060-000-777'),
+
+('1710986690099', 'Petar', 'Petrovic', 'Njegoseva', 43, 5, '064-022-9202'),
+('1212992700122', 'Ranko', 'Budurica', 'Brodarska', 17, 5, '063-123-1233'),
+('1301990700033', 'Bozidar', 'Simic', 'Belih bregova', 122, 2, '061-987-654'),
+('1005984610051', 'Stijenko', 'Brezan', 'Monolitska', 11, 4, '062-222-343'),
+('0107966430043', 'Mirko', 'Mitrovic', 'Serdara Janka', 1, 6, '060-666-777');
+
+
+INSERT INTO PocetakRada(JMBG, IdZM, DatumVreme)
+VALUES
+('1102995710022', 1,'2017-1-1 9:01:13'),
+('1102995710022', 1,'2017-1-2 9:00:43'),
+('1102995710022', 1,'2017-1-3 8:57:33'),
+
+('1203996711122', 2,'2017-1-1 10:01:44'),
+('1203996711122', 2,'2017-1-2 9:51:33'),
+('1203996711122', 2,'2017-1-3 10:01:03'),
+
+('1304992770033', 4,'2017-1-1 8:58:13'),
+('1304992770033', 4,'2017-1-1 9:03:12'),
+('1304992770033', 4,'2017-1-1 8:57:53'),
+
+('1111991710011', 3,'2017-1-1 9:05:13'),
+('1111991710011', 3,'2017-1-1 9:04:23'),
+('1111991710011', 3,'2017-1-1 9:02:33'),
+
+('0101976630033', 9,'2017-1-1 12:34:27'),
+('0101976630033', 8,'2017-1-1 13:01:42'),
+('0101976630033', 10,'2017-1-1 12:41:15'),
+
+('1710986690099', 11,'2017-1-1 14:01:17'),
+('1710986690099', 10,'2017-1-1 14:02:45'),
+('1710986690099', 11,'2017-1-1 13:59:13'),
+
+('1212992700122', 8,'2017-1-1 11:01:13'),
+('1212992700122', 8,'2017-1-1 11:04:22'),
+('1212992700122', 8,'2017-1-1 11:05:37'),
+
+('1301990700033', 4,'2017-1-1 9:02:43'),
+('1301990700033', 4,'2017-1-1 9:03:52'),
+('1301990700033', 4,'2017-1-1 9:00:44'),
+
+('1005984610051', 5,'2017-1-1 7:59:11'),
+('1005984610051', 6,'2017-1-1 7:57:25'),
+('1005984610051', 7,'2017-1-1 7:55:45'),
+
+('0107966430043', 8,'2017-1-1 12:21:13'),
+('0107966430043', 8,'2017-1-1 11:33:15'),
+('0107966430043', 9,'2017-1-1 11:47:53');
+
+
+INSERT INTO KrajRada(JMBG, IdZM, DatumVreme)
+VALUES
+('1102995710022', 1,'2017-1-1 17:12:03'),
+('1102995710022', 1,'2017-1-2 17:01:33'),
+('1102995710022', 1,'2017-1-3 17:04:33'),
+
+('1203996711122', 2,'2017-1-1 18:02:44'),
+('1203996711122', 2,'2017-1-2 18:01:33'),
+('1203996711122', 2,'2017-1-3 18:03:05'),
+
+('1304992770033', 4,'2017-1-1 16:59:23'),
+('1304992770033', 4,'2017-1-1 17:02:32'),
+('1304992770033', 4,'2017-1-1 17:04:53'),
+
+('1111991710011', 3,'2017-1-1 17:15:03'),
+('1111991710011', 3,'2017-1-1 17:04:54'),
+('1111991710011', 3,'2017-1-1 17:12:23'),
+
+('0101976630033', 9,'2017-1-1 16:30:27'),
+('0101976630033', 8,'2017-1-1 17:02:43'),
+('0101976630033', 10,'2017-1-1 19:22:05'),
+
+('1710986690099', 11,'2017-1-1 20:01:12'),
+('1710986690099', 10,'2017-1-1 19:52:35'),
+('1710986690099', 11,'2017-1-1 19:55:53'),
+
+('1212992700122', 8,'2017-1-1 19:03:27'),
+('1212992700122', 8,'2017-1-1 19:03:24'),
+('1212992700122', 8,'2017-1-1 17:03:37'),
+
+('1301990700033', 4,'2017-1-1 17:05:02'),
+('1301990700033', 4,'2017-1-1 17:04:51'),
+('1301990700033', 4,'2017-1-1 17:10:31'),
+
+('1005984610051', 5,'2017-1-1 15:59:42'),
+('1005984610051', 6,'2017-1-1 16:00:32'),
+('1005984610051', 7,'2017-1-1 15:55:45'),
+
+('0107966430043', 8,'2017-1-1 17:21:13'),
+('0107966430043', 8,'2017-1-1 14:53:25'),
+('0107966430043', 9,'2017-1-1 15:47:53');</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>232</xloc>
+      <yloc>72</yloc>
+      <draw>Y</draw>
+    </GUI>
+  </step>
+  <step_error_handling>
+  </step_error_handling>
+  <slave-step-copy-partition-distribution>
+  </slave-step-copy-partition-distribution>
+  <slave_transformation>N</slave_transformation>
+</transformation>

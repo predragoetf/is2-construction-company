@@ -1,0 +1,3 @@
+SELECT [Measures].[Broj] on axis(0),
+  {[ZonaMagacina].[NazivGradilista].Members}  on axis(1)
+FROM ZaposleniBrojanje

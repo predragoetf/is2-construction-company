@@ -1,0 +1,7 @@
+SELECT [Measures].[Kolicina] on axis(0),
+NON EMPTY CROSSJOIN ( CROSSJOIN ( 
+{[Materijal].[Tip].Members},
+{[Dan].[Datum].Members}),
+{[LokacijaGradilista].[Grad].Members}
+) on axis(1)
+FROM StanjeMaterijali

@@ -1,0 +1,146 @@
+<Schema name="New Schema1">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Vreme">
+    <Hierarchy name="Vremena" visible="true" hasAll="true" primaryKey="IdVre">
+      <Table name="Vreme" schema="dbo">
+      </Table>
+      <Level name="DatumVreme" visible="true" table="Vreme" column="DatumVreme" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Distributer">
+    <Hierarchy name="Distributeri" visible="true" hasAll="true" primaryKey="PIB">
+      <Table name="Distributer" schema="dbo">
+      </Table>
+      <Level name="NazivFirme" visible="true" table="Distributer" column="NazivFirme" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Lokacija">
+    <Hierarchy name="Lokacije" visible="true" hasAll="true" primaryKey="IdLok">
+      <Table name="Lokacija" schema="dbo">
+      </Table>
+      <Level name="Grad" visible="true" table="Lokacija" column="Grad" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Opstina" visible="true" table="Lokacija" column="Opstina" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Broj" visible="true" table="Lokacija" column="Broj" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Ulica" visible="true" table="Lokacija" column="Ulica" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Drzava" visible="true" table="Lokacija" column="Drzava" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="NabavkeVeze">
+    <Hierarchy name="NabavkeVezice" visible="true" hasAll="true" primaryKey="IdNab">
+      <Table name="NabavkeVeze" schema="dbo">
+      </Table>
+      <Level name="IdNab" visible="true" table="NabavkeVeze" column="IdNab" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="ZonaMagacina">
+    <Hierarchy name="ZoneMagacina" visible="true" hasAll="true" primaryKey="IdZM">
+      <Table name="ZonaMagacina" schema="dbo">
+      </Table>
+      <Level name="NazivGradilista" visible="true" table="ZonaMagacina" column="NazivGradilista" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="NazivMagacina" visible="true" table="ZonaMagacina" column="NazivMagacina" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="NazivZone" visible="true" table="ZonaMagacina" column="NazivZone" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="RedniBrojUnutarMagacina" visible="true" table="ZonaMagacina" column="RedniBrojUnutarMagacina" type="Integer" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Zaposlenost">
+    <Hierarchy name="Zaposlenosti" visible="true" hasAll="true" primaryKey="IdZps">
+      <Table name="Zaposlenost" schema="dbo" alias="">
+      </Table>
+      <Level name="Zaposljavanje" visible="true" table="Zaposlenost" column="Zaposljavanje" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Zaposleni">
+    <Hierarchy name="Zaposleni" visible="true" hasAll="true" primaryKey="JMBG">
+      <Table name="Zaposleni" schema="dbo" alias="">
+      </Table>
+      <Level name="Ime" visible="true" table="Zaposleni" column="Ime" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+      <Level name="Prezime" visible="true" table="Zaposleni" column="Prezime" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+      <Level name="BrojTelefona" visible="true" table="Zaposleni" column="BrojTelefona" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Materijal">
+    <Hierarchy name="Materijali" visible="true" hasAll="true" primaryKey="IdMat">
+      <Table name="Materijal" schema="dbo" alias="">
+      </Table>
+      <Level name="Tip" visible="true" table="Materijal" column="Tip" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+      <Level name="Naziv" visible="true" table="Materijal" column="Naziv" type="String" uniqueMembers="false" levelType="Regular">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Dan">
+    <Hierarchy name="Dani" visible="true" hasAll="true" primaryKey="IdDan">
+      <Table name="Dan" schema="dbo" alias="">
+      </Table>
+      <Level name="Datum" visible="true" table="Dan" column="Datum" type="Date" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="Nabavke" visible="true" cache="true" enabled="true">
+    <Table name="Nabavke" schema="dbo">
+    </Table>
+    <DimensionUsage source="Vreme" name="Vreme" visible="true" foreignKey="IdVre" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Distributer" name="Distributer" visible="true" foreignKey="PIB" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="NabavkeVeze" name="NabavkeVeze" visible="true" foreignKey="IdNab" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="ZonaMagacina" name="ZonaMagacina" visible="true" foreignKey="IdZM" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Lokacija" name="LokacijaGradilista" visible="true" foreignKey="IdLokGra" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Lokacija" name="LokacijaDistributera" visible="true" foreignKey="IdLokDist" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Kolicina" column="Kolicina" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+    <Measure name="Iznos" column="Iznos" datatype="Numeric" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="ZaposleniBrojanje" visible="true" cache="true" enabled="true">
+    <Table name="ZaposleniBrojanje" schema="dbo" alias="">
+    </Table>
+    <DimensionUsage source="ZonaMagacina" name="ZonaMagacina" visible="true" foreignKey="IdZM">
+    </DimensionUsage>
+    <DimensionUsage source="Vreme" name="Vreme" visible="true" foreignKey="IdVre">
+    </DimensionUsage>
+    <DimensionUsage source="Lokacija" name="LokacijaZaposlenog" visible="true" foreignKey="IdLokZap">
+    </DimensionUsage>
+    <DimensionUsage source="Lokacija" name="LokacijaGradilista" visible="true" foreignKey="IdLokMag">
+    </DimensionUsage>
+    <DimensionUsage source="Zaposleni" name="Zaposleni" visible="true" foreignKey="JMBG">
+    </DimensionUsage>
+    <DimensionUsage source="Zaposlenost" name="Zaposlenost" visible="true" foreignKey="IdZps">
+    </DimensionUsage>
+    <Measure name="Broj" column="Doprinos" datatype="Integer" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+  <Cube name="StanjeMaterijali" visible="true" cache="true" enabled="true">
+    <Table name="StanjeMaterijali" schema="dbo" alias="">
+    </Table>
+    <DimensionUsage source="Lokacija" name="LokacijaGradilista" visible="true" foreignKey="IdLokGra">
+    </DimensionUsage>
+    <DimensionUsage source="ZonaMagacina" name="ZonaMagacina" visible="true" foreignKey="IdZM">
+    </DimensionUsage>
+    <DimensionUsage source="Materijal" name="Materijal" visible="true" foreignKey="IdMat">
+    </DimensionUsage>
+    <DimensionUsage source="Dan" name="Dan" visible="true" foreignKey="IdDan">
+    </DimensionUsage>
+    <Measure name="Kolicina" column="Kolicina" aggregator="sum" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
